@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FirebaseChat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Widget.App.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+
+        <!--this child makes changes to the background color of the snackbar-->
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Snackbar</item>
+
+        <!--if this is made 0 then the action button text color will be white-->
+        <!--if this is 1 then the custom color can be set to action button text-->
+        <item name="actionTextColorAlpha">1</item>
+
+        <!--this attribute makes slide animation for the snackbar-->
+        <item name="animationMode">slide</item>
+    </style>
+
+    <!--this is child is needed only when there is action button in snackbar-->
+    <!--otherwise this is not necessary-->
+    <!--in this case the action button color inside the snackbar is set to red-->
+    <style name="Widget.App.SnackbarButton" parent="Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="actionButtonStyle">?attr/buttonStyle</item>
+    </style>
+
+    <!--this color inside this child is the background color of the snackbar-->
+    <style name="ThemeOverlay.App.Snackbar" parent="">
+        <item name="colorOnSurface">@android:color/black</item>
+    </style>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="group"
+            type="com.example.firebasechat.model.Group" />
+        <variable
+            name="lastMassage"
+            type="com.example.firebasechat.model.Message" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="6dp"
+        android:layout_marginTop="6dp"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{group.groupName}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="24sp"
+            tools:text="User-1" />
+
+        <TextView
+            android:id="@+id/last_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:hint="last sender"
+            android:text="@{lastMassage.sender}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/group_name"
+            android:textSize="16sp"
+            tools:text="User-1"
+            android:textColor="#505050"/>
+
+        <TextView
+            android:id="@+id/last_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:hint="last massage"
+            android:text="@{lastMassage.msgText}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomOf="@id/group_name"
+            app:layout_constraintLeft_toRightOf="@+id/last_sender"
+            android:textSize="16sp"
+            tools:text="User-1"
+            android:textColor="#505050"/>
+
+        <TextView
+            android:id="@+id/last_msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="22 Apr 22:05"
+            android:text="@{lastMassage.date}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="16sp"
+            tools:text="User-1"
+            android:textColor="#505050"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

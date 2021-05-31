@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FirebaseChat</string>
+    <string name="name">Name</string>
+    <string name="submit">SUBMIT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ceate">CEATE</string>
+    <string name="group_name">Group name</string>
+    <string name="sending">sending</string>
+    <string name="adding">adding</string>
+    <string name="enter_message_here">enter message here</string>
+</resources>
